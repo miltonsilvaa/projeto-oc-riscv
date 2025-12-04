@@ -1,0 +1,65 @@
+{
+    // Versão do schema de configurações de debug
+    "version": "0.2.0",
+    
+    // Lista de configurações de debug disponíveis
+    "configurations": [
+        {
+            // Nome amigável que aparece no seletor de debug
+            "name": "Executar Simulador RISC-V",
+            
+            // Tipo de debugger - cppdbg é para C/C++ com GDB/LLDB
+            "type": "cppdbg",
+            
+            // request: "launch" - inicia um novo processo para debug
+            // (alternativa: "attach" para conectar a processo existente)
+            "request": "launch",
+            
+            // Caminho para o executável que será depurado
+            // ${workspaceFolder} é a variável para a pasta do projeto
+            "program": "${workspaceFolder}/simulador",
+            
+            // Argumentos de linha de comando para passar para o programa
+            // Vazio significa que o programa roda sem argumentos
+            "args": [],
+            
+            // Se deve parar na primeira linha do programa (entry point)
+            // false = começa a execução normalmente
+            "stopAtEntry": false,
+            
+            // Diretório de trabalho (current working directory)
+            // ${workspaceFolder} = usa a pasta do projeto como diretório base
+            "cwd": "${workspaceFolder}",
+            
+            // Variáveis de ambiente adicionais para o processo
+            // Vazio = herda as variáveis de ambiente do sistema
+            "environment": [],
+            
+            // Se deve usar console externo (janela de prompt separada)
+            // false = usa o terminal integrado do VS Code
+            "externalConsole": false,
+            
+            // Modo do MI (Machine Interface) - gdb para GNU Debugger
+            "MIMode": "gdb",
+            
+            // Comandos executados no GDB durante a inicialização
+            "setupCommands": [
+                {
+                    // Descrição do comando
+                    "description": "Enable pretty-printing for gdb",
+                    
+                    // Comando GDB: ativa impressão formatada para estruturas C++
+                    // Facilita a leitura de variáveis complexas como std::vector, std::string
+                    "text": "-enable-pretty-printing",
+                    
+                    // Se true, continua mesmo se este comando falhar
+                    "ignoreFailures": true
+                }
+            ],
+            
+            // TAREFA CRÍTICA: Executa a compilação antes de depurar
+            // Nome deve bater exatamente com o "label" do tasks.json
+            "preLaunchTask": "Build Simulador RISC-V"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Simulador RISC-V",
+            "type": "shell", 
+            "command": "g++",
+            "args": [
+                "-g",
+                "-static", 
+                "-Wall",
+                "-Wextra",
+                "main.cpp",
+                "simulador.cpp",
+                "cpu.cpp",
+                "barramento.cpp", 
+                "memoria.cpp",
+                "cache.cpp",     
+                "teclado.cpp",
+                "-o",
+                "simulador.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

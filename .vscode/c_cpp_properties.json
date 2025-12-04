@@ -1,0 +1,43 @@
+{
+    // Configurações do IntelliSense para C/C++ no VS Code
+    // Este arquivo ajuda o editor a entender seu código C++
+    "configurations": [
+        {
+            // Nome da configuração - "Win32" indica configuração para Windows
+            "name": "Win32",
+            
+            // Lista de pastas onde o IntelliSense deve procurar por headers
+            // "${workspaceFolder}/**" = inclui TODAS as subpastas do projeto
+            // Isso permite que o VS Code encontre seus arquivos .h automaticamente
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            
+            // Definições de pré-processador (macros)
+            // São como se você tivesse escrito #define no código
+            "defines": [
+                "_DEBUG",       // Habilita código de debug
+                "UNICODE",      // Usa Unicode (wide characters) no Windows
+                "_UNICODE"      // Usa Unicode (wide characters) no Windows
+            ],
+            
+            // Caminho para o compilador C++
+            // O VS Code usa isso para analisar a sintaxe corretamente
+            "compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
+            
+            // Padrão C a ser usado - C17 é a versão atual do padrão C
+            "cStandard": "c17",
+            
+            // Padrão C++ a ser usado - gnu++17 = C++17 com extensões GNU
+            // Isso permite recursos modernos do C++ e compatibilidade GCC
+            "cppStandard": "gnu++17",
+            
+            // Modo do IntelliSense - otimizado para GCC no Windows 64-bit
+            // Isso faz o VS Code entender as bibliotecas e comportamento do GCC
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    
+    // Versão do schema deste arquivo de configuração
+    "version": 4
+}
