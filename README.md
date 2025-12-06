@@ -106,6 +106,10 @@ Trecho do log de execução demonstrando o funcionamento do Pipeline e da Cache:
 ✅ [main] SIMULADOR FUNCIONOU!
 ```
 
+###Link do vídeo da apresentação:
+
+[Projeto OC — Demonstração no YouTube](https://youtu.be/reFgKsWUOvA)
+
 ### 👥 Autores
 
 * Arthur Batista Correa Alves
